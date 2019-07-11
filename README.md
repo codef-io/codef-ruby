@@ -1,5 +1,5 @@
 # CODEF API - Python
-Python sample for CODEF API
+Ruby sample for CODEF API
 
 ## Documentation
 
