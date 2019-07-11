@@ -53,7 +53,7 @@ end
 
 
 # token URL
-token_url = 'http://192.168.10.126:8888/oauth/token'
+token_url = 'http://192.168.10.126:8888/v1/oauth/token'
 
 # CODEF 연결 아이디
 connected_id = ''
