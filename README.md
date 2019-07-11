@@ -1,4 +1,4 @@
-# CODEF API - Python
+# CODEF API - Ruby
 Ruby sample for CODEF API
 
 ## Documentation
