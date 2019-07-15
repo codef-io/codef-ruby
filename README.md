@@ -175,37 +175,68 @@ body = {
     'organization':'0011'
 }
 
+# HTTP Sender
+def http_sender(url, token, body)
+  uri = URI.parse(url)
+
+  puts('url = ' + url)
+  puts('uri.request_uri = ' + uri.request_uri)
+
+  headers = {
+    'Content-Type'=>'application/json',
+    'Authorization'=>'Bearer ' + token
+  }
+
+  http = Net::HTTP.new(uri.host, uri.port)
+  http.use_ssl = true
+  request = Net::HTTP::Post.new(url, headers)
+  request.body = body.to_json
+  response = http.request(request)
+
+  puts(response.code)
+  puts(URI.decode(response.body))
+
+  return response
+end
+
 # CODEF API 요청
 response_codef_api = http_sender(codef_url + account_list_path, token, body)
 
+if response_codef_api.code == '200'
+  puts('정상처리')
 # token error
-if response_codef_api.status_code == 401:
-    dict = json.loads(response_codef_api.text)
+elsif response_codef_api.code == '401'
+    dict = JSON.parse(response_codef_api.body)
+
     # invalid_token
-    print('error = ' + dict['error'])
+    puts('error = ' + dict['error'])
     # Cannot convert access token to JSON
-    print('error_description = ' + dict['error_description'])
+    puts('error_description = ' + dict['error_description'])
 
     # reissue token
     response_oauth = request_token(token_url, "codef_master", "codef_master_secret");
-    if response_oauth.status_code == 200:
-        dict = json.loads(response_oauth.text)
+    puts('response_oauth.code = ' + response_oauth.code)
+    puts('response_oauth.code = ' + response_oauth.body)
+    if response_oauth.code == '200'
+        dict = JSON.parse(response_oauth.body)
+
         # reissue_token
         token = dict['access_token']
-        print('access_token = ' + token)
+        puts('access_token = ' + token)
 
         # request codef_api
         response = http_sender(codef_url + account_list_path, token, body)
 
         # codef_api 응답 결과
-        print(response.status_code)
-        print(response.text)
+        puts(response.code)
+        puts(URI.decode(response.body))
     else
-        print('토큰발급 오류')
+        puts('토큰발급 오류')
     end
 else
-    print('정상처리')
+    puts('API 요청 오류')
 end
+
 ```
 ```json
 {"result":{"code":"CF-94002","extraMessage":"","message":"사용자+계정정보+설정에+실패했습니다."},"data":{}}
