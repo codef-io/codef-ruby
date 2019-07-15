@@ -104,5 +104,5 @@ elsif response_codef_api.code == '401'
         puts('토큰발급 오류')
     end
 else
-    puts('정상처리')
+    puts('API 요청 오류')
 end

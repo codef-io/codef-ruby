@@ -8,7 +8,6 @@ require 'uri'
 
 # ========== HTTP 기본 함수 ==========
 def http_sender(url, token, body)
-  puts('========== http_sender ========== ')
   uri = URI.parse(url)
 
   puts('url = ' + url)
@@ -34,7 +33,6 @@ end
 
 # ========== Toekn 재발급  ==========
 def request_token(url, client_id, client_secret)
-  puts('========== request_token ========== ')
   uri = URI.parse(url)
 
   authHeader = Base64.encode64(client_id + ':' + client_secret)
