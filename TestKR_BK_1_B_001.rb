@@ -84,7 +84,7 @@ elsif response_codef_api.code == '401'
     puts('error_description = ' + dict['error_description'])
 
     # reissue token
-    response_oauth = request_token(token_url, "codef_master", "codef_master_secret");
+    response_oauth = request_token(token_url, "CODEF로부터 발급받은 클라이언트 아이디", "CODEF로부터 발급받은 시크릿 키");
     puts('response_oauth.code = ' + response_oauth.code)
     puts('response_oauth.code = ' + response_oauth.body)
     if response_oauth.code == '200'

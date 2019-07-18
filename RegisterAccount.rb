@@ -111,7 +111,7 @@ elsif response_account_create.code == '401'      # token error
     puts('error_description = ' + dict['error_description'])
 
     # reissue token
-    response_oauth = request_token(token_url, "codef_master", "codef_master_secret");
+    response_oauth = request_token(token_url, "CODEF로부터 발급받은 클라이언트 아이디", "CODEF로부터 발급받은 시크릿 키");
     if response_oauth.code == '200'
         dict = JSON.parse(response_oauth.body)
         # reissue_token
@@ -184,7 +184,7 @@ elsif response_account_add.code == '401'      # token error
     puts('error_description = ' + dict['error_description'])
 
     # reissue token
-    response_oauth = request_token(token_url, "codef_master", "codef_master_secret");
+    response_oauth = request_token(token_url, "CODEF로부터 발급받은 클라이언트 아이디", "CODEF로부터 발급받은 시크릿 키");
     if response_oauth.code == '200'
         dict = JSON.parse(response_oauth.body)
         # reissue_token
@@ -251,7 +251,7 @@ elsif response_account_update.code == '401'      # token error
     puts('error_description = ' + dict['error_description'])
 
     # reissue token
-    response_oauth = request_token(token_url, "codef_master", "codef_master_secret");
+    response_oauth = request_token(token_url, "CODEF로부터 발급받은 클라이언트 아이디", "CODEF로부터 발급받은 시크릿 키");
     if response_oauth.code == '200'
         dict = JSON.parse(response_oauth.body)
         # reissue_token
@@ -321,7 +321,7 @@ elsif response_account_delete.code == '401'      # token error
     puts('error_description = ' + dict['error_description'])
 
     # reissue token
-    response_oauth = request_token(token_url, "codef_master", "codef_master_secret");
+    response_oauth = request_token(token_url, "CODEF로부터 발급받은 클라이언트 아이디", "CODEF로부터 발급받은 시크릿 키");
     if response_oauth.code == '200'
         dict = JSON.parse(response_oauth.body)
         # reissue_token
