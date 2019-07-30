@@ -61,7 +61,7 @@ def request_token(url, client_id, client_secret)
 end
 # ========== Toekn 재발급  ==========
 
-# ========== Toekn 재발급  ==========
+# ========== RSA Encrypt  ==========
 def publicEncRSA(publicKey, data)
   rsa_public_key = OpenSSL::PKey::RSA.new(Base64.decode64(publicKey))
   encryptedData = Base64.encode64(rsa_public_key.public_encrypt(data))
@@ -70,7 +70,7 @@ def publicEncRSA(publicKey, data)
 
   return encryptedData.gsub("\n", "")
 end
-# ========== Toekn 재발급  ==========
+# ========== RSA Encrypt  ==========
 
 
 response = nil
