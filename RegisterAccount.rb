@@ -313,10 +313,7 @@ codef_account_delete_body = {
                   'businessType':'BK',
                   'clientType':'P',
                   'organization':'0020',
-                  'loginType':'0',
-                  'password':'1234',      # 인증서 비밀번호 입력
-                  'derFile':'MIIF...',    # 인증서 인증서 DerFile
-                  'keyFile':'MIIF...'     # 인증서 인증서 KeyFile
+                  'loginType':'0'
                 }
             ]
 }
