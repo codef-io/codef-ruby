@@ -76,8 +76,8 @@ end
 response = nil
 
 # CodefURL
-codef_url = 'https://tapi.codef.io'
-token_url = 'https://toauth.codef.io/oauth/token'
+codef_url = 'https://api.codef.io'
+token_url = 'https://oauth.codef.io/oauth/token'
 
 # 기 발급된 토큰
 token =''
@@ -101,7 +101,7 @@ pubKey = 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqfaFcUivfb/Y2/miAccmnARokQ
 #
 ##############################################################################
 print('=============================== 계정생성 ===============================')
-codef_account_create_url = 'https://tapi.codef.io/v1/account/create'
+codef_account_create_url = 'https://api.codef.io/v1/account/create'
 codef_account_create_body = {
             'accountList':[
               {
@@ -169,7 +169,7 @@ end
 #   keyFile : 인증서 keyFile
 #
 ##############################################################################
-codef_account_add_url = 'https://tapi.codef.io/v1/account/add'
+codef_account_add_url = 'https://api.codef.io/v1/account/add'
 codef_account_add_body = {
             'connectedId': '8-cXc.6lk-ib4Whi5zClVt',    # connected_id
             'accountList':[
@@ -238,7 +238,7 @@ end
 #   keyFile : 인증서 keyFile
 #
 ##############################################################################
-codef_account_update_url = 'https://tapi.codef.io/v1/account/update'
+codef_account_update_url = 'https://api.codef.io/v1/account/update'
 codef_account_update_body = {
             'connectedId': '8-cXc.6lk-ib4Whi5zClVt',        # connected_id
             'accountList':[
@@ -304,7 +304,7 @@ end
 #   keyFile : 인증서 keyFile
 #
 ##############################################################################
-codef_account_delete_url = 'https://tapi.codef.io/v1/account/delete'
+codef_account_delete_url = 'https://api.codef.io/v1/account/delete'
 codef_account_delete_body = {
             'connectedId': '8-cXc.6lk-ib4Whi5zClVt',        # connected_id
             'accountList':[
