@@ -59,8 +59,8 @@ end
 response = nil
 
 # CodefURL
-codef_url = 'https://tapi.codef.io'
-token_url = 'https://toauth.codef.io/oauth/token'
+codef_url = 'https://development.codef.io'
+token_url = 'https://oauth.codef.io/oauth/token'
 
 # 저축 은행 개인 거래내역
 account_list_path = '/v1/kr/bank2/p/account/transaction-list'

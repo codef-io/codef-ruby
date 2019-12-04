@@ -59,8 +59,8 @@ end
 response = nil
 
 # CodefURL
-codef_url = 'https://tapi.codef.io'
-token_url = 'https://toauth.codef.io/oauth/token'
+codef_url = 'https://development.codef.io'
+token_url = 'https://oauth.codef.io/oauth/token'
 
 # 카드 법인 승인내역 조회
 account_list_path = '/v1/kr/card/b/account/approval-list'
