@@ -62,8 +62,8 @@ end
 response = nil
 
 # CodefURL
-codef_url = 'https://tapi.codef.io'
-token_url = 'https://toauth.codef.io/oauth/token'
+codef_url = 'https://development.codef.io'
+token_url = 'https://oauth.codef.io/oauth/token'
 
 # connectedId 목록조회
 connected_id_list_path = '/v1/account/connectedId-list'
